@@ -1,0 +1,74 @@
+<div id="body" >
+
+
+<p>Profile</p>
+	<form action="/cgi-bin/su/profile/su_change_profile.cgi" method="post" name="change_profile" value="change_profile">
+		<table border=0 style="margin-left:220px;margin-right:0px">
+				<tr>
+					<td>ID</td>
+					<td style="color:black;"><input name="txtid" type="hidden" value="<tmpl_var name=txtid>" ><tmpl_var name=txtid></td>
+					<td class="message" style="width:15pc"><tmpl_var name=varid></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input name="txtname" type="text" value="<tmpl_var name=txtname>" /></td>
+					<td class="message"><tmpl_var name=varname></td>
+				</tr>
+				<tr>
+					<td>Birth Date</td>
+					<td><input type="Text" name="txtbirthdate" id="birthdate" maxlength="25" size="18" value="<tmpl_var name=txtbirthdate>" readonly><a href="javascript:NewCal('birthdate','mmddyyyy')"><img src="/images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
+					<td class="message"><tmpl_var name=varbirthdate></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><input name="txtaddress" type="text" value="<tmpl_var name=txtaddress>"/></td>
+					<td class="message"><tmpl_var name=varaddress></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><input name="txtcity" type="text" value="<tmpl_var name=txtcity>" /></td>
+					<td class="message"><tmpl_var name=varcity></td>
+				</tr>
+				<tr>
+					<td>State,Country</td>
+					<td><input name="txtstate" type="text" value="<tmpl_var name=txtstate>"/></td>
+					<td class="message"><tmpl_var name=varstate></td>
+				</tr>
+				<tr>
+					<td>Sex</td>
+					<td><select name="txtsex" size="1" ><option  <tmpl_var name=male> value="male">male</option><option  <tmpl_var name=female> value="female">female</option></select></td></tr>
+					<td class="message"><tmpl_var name=varsex></td>
+				<tr>
+					<td>Mobile Number</td>
+					<td><input name="txtphno" type="text" value="<tmpl_var name=txtphno>"/></td>
+					<td class="message"><tmpl_var name=varphno></td>
+				</tr>
+				<tr>
+					<td>Join Date</td>
+					<td style="color:black;"><input type="hidden" name="txtjoindate" id="join_date" value="<tmpl_var name=txtjoindate>"><tmpl_var name=txtjoindate></td>
+					<td class="message"><tmpl_var name=varjoindate></td>
+				</tr>
+				<tr>
+					<td>User Type</td>
+					<td style="color:black;width:100px;"><input type="hidden" name="txtusertype" value="<tmpl_var name=txttype>"><tmpl_var name=txttype></td>
+					<td class="message"><tmpl_var name=varusertype></td>
+				</tr>	
+				<tr>
+					<td>Maximum Books allow</td>
+					<td style="color:black;"><input name="txtbookallow" type="hidden" value="<tmpl_var name=txtbookallow>"/> <tmpl_var name=txtbookallow></td>				
+					<td class="message"><tmpl_var name=varbookallow></td>
+				</tr>			
+				<tr>
+					<td>Username</td>
+					<td><input name="txtusername" type="text" value="<tmpl_var name=txtusername>" /></td>				
+					<td class="message"><tmpl_var name=varusername></td>
+				</tr>
+				<tr><td></br></td></tr>
+				<tr>
+					<td></td>
+					<td><input class="button" name="update" value="Update" type="submit"></td>
+				</tr>
+		</table>
+	</form>
+
+</div>	<!-- end of body div -->

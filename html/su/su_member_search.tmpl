@@ -1,0 +1,60 @@
+<div id="body">
+
+<p><b>Search Member</b><p>
+	<form action="/cgi-bin/su/su_member_search_member.cgi" method="post" name="add_member" value="add_member">
+		<table border=0>
+				<tr>
+					<td style="text-align:right;" width=150px>Memeber Id  </td>
+					<td ><input name="txtid"  size=13px type="text" placeholder="member id"/></td>
+					<td id="no_mem" class="message" width=150px><tmpl_var name=varid></td>
+				</tr>
+				<tr><td></br></td></tr>
+				<tr>
+					<td></td>
+					<td><input class="button" name="search" value="Search" type="submit" onclick="return valid_mid(txtid.value)"></td>
+				</tr>
+		</table>
+	</form>
+
+	<div class="search_mem" style="visibility:<tmpl_var name=search_table>">
+	<table border=1>
+		<tr class="table_back" >
+		<td>Id</td><td>Name</td><td>BirthDate</td><td>Address</td><td>Sex</td><td>Mobile Number</td><td>JoinDate</td><td>UserType</td><td>UserName</td><td>Password</td>
+		</tr>
+		<TMPL_LOOP NAME="THIS_LOOP">
+			<tr>
+			<td><TMPL_VAR NAME="id"></td>
+			<td><TMPL_VAR NAME="name"></td>
+			<td><TMPL_VAR NAME="birthdate"></td>
+			<td><TMPL_VAR NAME="address">, <TMPL_VAR NAME="city">, <TMPL_VAR NAME="state"></td>
+			<td><TMPL_VAR NAME="sex"></td>
+			<td><TMPL_VAR NAME="phno"></td>
+			<td><TMPL_VAR NAME="joindate"></td>
+			<td><TMPL_VAR NAME="usertype"></td>
+			<td><TMPL_VAR NAME="username"></td>
+			<td><TMPL_VAR NAME="password"></td>
+			</tr>
+		</TMPL_LOOP>
+	</table>
+	</div>	<!-- end of search_mem div -->
+<br><br>
+
+	<div class="tableContainer" style="visibility:<tmpl_var name=search_books>">
+	<table border=1>
+		<tr class="table_back" >
+		<td>Book Id</td><td>title</td><td>Issued Date</td><td>Issued By</td><td>Fine</td>
+		</tr>
+		<TMPL_LOOP NAME="issued_book">
+			<tr>
+			<td><TMPL_VAR NAME="bid"></td>
+			<td><TMPL_VAR NAME="title"></td>
+			<td><TMPL_VAR NAME="issuedate"></td>
+			<td><TMPL_VAR NAME="issueby"></td>
+			<td><TMPL_VAR NAME="Fine"></td>
+			</tr>
+		</TMPL_LOOP>
+	</table>
+	</div>	<!-- end of search_books div -->
+<p><tmpl_var name=total_book></p>
+
+</div>	<!-- end of body div -->

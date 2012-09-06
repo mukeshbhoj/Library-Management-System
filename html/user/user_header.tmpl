@@ -1,0 +1,99 @@
+<DOCTYPE html>
+<html>
+<head>
+	<div id="pageheader">
+		<title>The Central Library</title>
+		<link rel="icon"   type="image/png"  href="/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/style/style.css" />
+		<script type="text/javascript" src="/style/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript">
+		<!--
+		var image1=new Image()
+		image1.src="/images/home/home.jpg"
+		var image2=new Image()
+		image2.src="/images/home/img.jpg"
+		var image3=new Image()
+		image3.src="/images/home/img1.jpg"
+		var image4=new Image()
+		image4.src="/images/home/img2.jpg"
+		var image5=new Image()
+		image5.src="/images/home/img3.jpg"
+		var image6=new Image()
+		image6.src="/images/home/img4.jpg"
+		var image7=new Image()
+		image7.src="/images/home/img5.jpg"
+		var image8=new Image()
+		image8.src="/images/home/img6.jpg"
+		var image9=new Image()
+		image9.src="/images/home/img7.jpg"
+		var image10=new Image()
+		image10.src="/images/home/img8.jpg"
+		var image11=new Image()
+		image11.src="/images/home/img9.jpg"
+		//-->
+		</script>
+
+
+		<script language="javascript" type="text/javascript">  
+			function notchanged(str)
+			{
+				 document.getElementById("+str+").innerHTML="Only admin can change it";
+				 return;
+			}
+			
+			function tablePrint()  
+			{  
+				  
+				var display_setting="toolbar=no,location=no,directories=no,menubar=no,";  
+				display_setting+="scrollbars=no,width=750, height=600, left=100, top=25";  
+				  
+				var content_innerhtml = document.getElementById("fine").innerHTML;  
+				var document_print=window.open("","",display_setting);  
+				document_print.document.open();  
+				document_print.document.write('<html><head><title>Print using javascript </title></head>');  
+				document_print.document.write('<body style="font-family:verdana; font-size:12px;" onLoad="self.print();self.close();" >');  
+				document_print.document.write(content_innerhtml);  
+				document_print.document.write('</body></html>');  
+				document_print.print();  
+				document_print.document.close();  
+				return false;  
+			}  
+
+			function passwordStrength(password)
+			{
+				var desc = new Array();
+				desc[0] = "Very Weak";
+				desc[1] = "Weak";
+				desc[2] = "Better";
+				desc[3] = "Medium";
+				desc[4] = "Strong";
+				desc[5] = "Strongest";
+
+				var score   = 0;
+
+				//if password bigger than 6 give 1 point
+				if (password.length > 6) score++;
+
+				//if password has both lower and uppercase characters give 1 point      
+				if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;
+
+				//if password has at least one number give 1 point
+				if (password.match(/\d+/)) score++;
+
+				//if password has at least one special caracther give 1 point
+				if ( password.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) ) score++;
+
+				//if password bigger than 12 give another 1 point
+				if (password.length > 12) score++;
+
+				 document.getElementById("passwordDescription").innerHTML = desc[score];
+				 document.getElementById("passwordStrength").className = "strength" + score;
+			}
+		</script> 
+
+
+	</div> <!-- end of pageheader div -->
+</head>
+
+
+

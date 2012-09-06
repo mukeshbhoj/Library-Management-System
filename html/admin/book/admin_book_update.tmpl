@@ -1,0 +1,20 @@
+<div id="body" >
+
+	<p><b>Update Book</b></p>
+	
+	<form action="/cgi-bin/admin/book/admin_book_update_search.cgi" method="post" name="search_book" value="search_book">
+		<table border=0>
+				<tr>
+					<td width=140px >Group Id  </td>
+					<td><input name="txtid" size=13px type="text" /></td>
+					<td id="no_group" width=150px class="message"><tmpl_var name=varid></td>
+				</tr>
+				<tr><td></br></td></tr>
+				<tr>
+					<td></td>
+					<td><input class="button" name="search" value="Search" type="submit" onclick="return valid_gid_search(txtid.value)"></td>
+				</tr>
+		</table>
+	</form>
+
+</div>	<!-- end of body div -->

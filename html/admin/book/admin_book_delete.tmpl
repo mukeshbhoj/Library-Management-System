@@ -1,0 +1,55 @@
+<div id="body">
+	
+	<p>Delete Book</p>
+	<form action="/cgi-bin/admin/book/admin_book_delete_submit.cgi" method="post" name="delete_book" value="delete_book">
+		<table border=0>
+		
+		<!-- search book id by group id -->
+		<tr>
+			<td>Group ID</td>
+			<td><input name="txtid" type="text" placeholder="search"></td>
+			<td>Book ID</td>
+			<td><input name="txtbid" type="text" placeholder="Book Id"></td>		
+		</tr>
+		<!-- book id which you want to delete -->
+		<tr>
+			<td><p></p></td>
+			<td><input class="button" type="submit" name="search_books" value="Search Book" onclick="return valid_gid(txtid.value)"  ></td>
+			<td><p></p></td>
+			<td><input class="button" type="submit" name="delete_books" value="Delete Book" onclick="return valid_bid_delete(txtbid.value)" ></td>
+		</tr>
+		<tr>
+			<td><p></p></td>
+			<td id=no_group class="message"><tmpl_var name=no_group></td>
+			<td><p></p></td>
+	
+			<td id=no_book class="message"><tmpl_var name=no_book></td>
+		</tr>
+		</table>
+	</form>
+	
+	<!-- provides all the books of searched group id -->
+	<div class="search">
+		<table border=1 style="visibility:<tmpl_var name=delete_table>">
+		<tr class="table_back">
+		<td>Book ID</td><td>Book Title</td><td>Subject Name</td><td>Tag</td><td>Author Name</td><td>Edition</td><td>Publisher</td><td>Available</td>
+		</tr>
+		<TMPL_LOOP NAME="deletebooks">
+		<tr>
+			<td><TMPL_VAR NAME="BID"></td>
+			<td><TMPL_VAR NAME="TITLE"></td>
+			<td><TMPL_VAR NAME="SUB"></td>
+			<td><TMPL_VAR NAME="TAG"></td>
+			<td><TMPL_VAR NAME="AUTH"></td>
+			<td><TMPL_VAR NAME="EDITION"></td>
+			<td><TMPL_VAR NAME="PUBLISHER"></td>
+			<td><TMPL_VAR NAME="AVAIL"></td>
+		</tr>
+		</TMPL_LOOP>
+		</table>
+	</div>	<!-- end of search div -->
+
+
+
+
+</div> <!-- end of body div -->

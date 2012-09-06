@@ -1,0 +1,45 @@
+<div id="body">
+
+<p>Return Book</p>
+<form action="/cgi-bin/admin/return/admin_return_submit.cgi?mid=<TMPL_VAR NAME=mid>" method="post" name="return_book" value="return_book">
+	<div class="search">
+<!-- ====================================Member Table===============================-->		
+		<table border=1>
+		<tr class="table_back">
+			<td>Member Id</td><td>Name</td><td>Address</td><td>Mobile Number</td><td>User Type</td>
+		</tr>
+			<tr>
+			<td><TMPL_VAR NAME=mid></td>
+			<td><TMPL_VAR NAME=name></td>
+			<td><TMPL_VAR NAME=address></td>
+			<td><TMPL_VAR NAME=phno></td>
+			<td><TMPL_VAR NAME=usertype></td>
+			</tr>
+		</table>
+<!-- ==================================Member Table over===============================-->
+	<p><br>Check those books which <td><TMPL_VAR NAME=name></td> wants to return.</p>
+<!-- =====================================Book Table=================================-->
+		<table border=1>
+		<tr class="table_back">
+			<td>Book Id</td><td>Book Title</td><td>Issue Date</td><td>Issued By</td><td>Fine</td>
+		</tr>
+		<TMPL_LOOP NAME="returnbooks">
+			<tr>
+			<td><input type="checkbox" name="rd_bid" value=<TMPL_VAR NAME="bid"> ><TMPL_VAR NAME="bid"></td>
+			<td><TMPL_VAR NAME="title"></td>
+			<td><TMPL_VAR NAME="issuedate"></td>
+			<td><TMPL_VAR NAME="issueby"></td>
+			<td><TMPL_VAR NAME="fine"> Rs</td>
+			</tr>
+		</TMPL_LOOP>
+		</table>
+		<p><tmpl_var name=issued_book></p>
+		<input class="button" type="submit" name="return_books" value="return_books" onclick="return valid_bid()">
+		<p id="no_book" class="message"></p>
+	</div>	<!-- end of search div -->
+<!-- ==================================Book Table over=================================-->
+
+</form>	<!--end of form -->
+<tmpl_var name=SELECT>
+
+</div> <!-- end of body div -->

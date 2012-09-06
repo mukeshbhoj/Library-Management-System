@@ -1,0 +1,26 @@
+
+
+<div id="body">
+	<div id="fine">
+		<br><br><br><br>
+		<p>Fine</p>
+		<table border=2 style="background-color:white;">
+			<tr><td colspan=2><tmpl_var name=library></td></tr>
+			<tr><td>Name</td><td><tmpl_var name=name></td></tr>
+			<tr><td>Fine</td><td><tmpl_var name=fine> Rs.</td></tr>
+			<tr>
+				<td>Book IDs</td>
+				<td><tmpl_loop name=finebooks>	
+						<tmpl_var name=bookid>, 
+					</tmpl_loop>
+				</td>
+			</tr>
+			<tr><td>Date</td><td><tmpl_var name=date></td></tr>
+			<td></td>
+		</table>
+	</div> <!-- end of fine div -->
+	<p><br><tmpl_var name=books> book(s) returned successfully</p>
+	
+	<td><a href="/cgi-bin/su/return/su_return.cgi"><input type="button" value="OK"></a></td><input type="button" value="Print" onclick="tablePrint();">  
+</div> <!-- end of fine div -->
+

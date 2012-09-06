@@ -1,0 +1,44 @@
+
+<div id="body">
+	
+	<p>All Books</p>
+	<p style="text-align:left;"><TMPL_VAR NAME="RECORDS"></p>
+
+	<div class = "viewall" style="font-size:14px">
+
+	<table border=1 class="search_table" style="visibility:<tmpl_var name=search_table>">
+		 
+		<tr style="height:30px;width:860px;" class="table_back" style=" " >
+				<td style="width:39px;" >GID</td>
+				<td style="width:37px;" >BID</td>
+				<td style="width:109px;">Book Title</td>
+				<td style="width:75px;">Subject Name</td>
+				<td style="width:125px;">Tag</td>
+				<td style="width:103px;">Author Name</td>
+				<td style="width:60px;">Edition</td>
+				<td style="width:85px;">Publisher</td>
+				<td style="width:89px;">Availability</td>
+		</tr>
+		
+		<tr style="height:100%;width:100%;">	<td colspan="9">
+			<div style="height:500px;width:860px; overflow:auto;">
+			<table style="height:100%;width:100%;" border=1>
+				<TMPL_LOOP NAME="THIS_LOOP" >
+				<tr style="height:30px;width:100%;">
+						<td style="width:34px;"><TMPL_VAR NAME="GID"></td>
+						<td style="width:37px;"><TMPL_VAR NAME="BID"></td>
+						<td style="width:109px;"><TMPL_VAR NAME="TITLE"></td>
+						<td style="width:75px;"><TMPL_VAR NAME="SUB"></td>
+						<td style="width:125px;"><TMPL_VAR NAME="TAG"></td>
+						<td style="width:103px;"><TMPL_VAR NAME="AUTH"></td>
+						<td style="width:60px;"><TMPL_VAR NAME="EDITION"></td>
+						<td style="width:85px;"><TMPL_VAR NAME="PUBLISHER"></td>
+						<td style="width:70px;"><TMPL_VAR NAME="AVAIL"></td>
+				</tr>
+				</TMPL_LOOP>
+			</table></div></td>
+		</tr>
+		
+	</table>
+</div> <!-- end of viewall div -->
+</div> <!-- end of body div -->

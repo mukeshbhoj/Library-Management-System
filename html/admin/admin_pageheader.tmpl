@@ -1,0 +1,54 @@
+
+
+<body>
+
+<!-- border div provides facility of transparent background by adding transparent image as a background in this div -->
+<!-- ============================================================================================================== -->
+<div id="border" style="border-right: solid #bbbbbb;border-right-width:1px; border-left: solid #bbbbbb;border-left-width:1px; border-top: solid #bbbbbb;border-top-width:1px;">
+
+<div id="header">
+	<table border=0>
+	<tr>
+		<td><span style="float:right"><img src="/images/book_logo2.jpg" height=70 width=100></span></td>
+		<td><h1><span style="float:right"> The Central Library For Public </span></h1>
+		<p><span style="float:right"> For you, With you and By you </span></p></td>
+		<td><img src="/images/book_logo2.jpg" height=70 width=100></td></tr>
+	</tr>
+	</table>
+	
+	<p><span style="color:red">welcome <TMPL_VAR NAME=username></span><a href="/cgi-bin/admin/logout.cgi" style="float:right">Logout</a></p>
+	<div id="buttons" >
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td><a href="/cgi-bin/admin/admin_home.cgi" class="button1">Home</a></td>
+			
+			<!-- onmouseover this tab shows list -->
+			<td onmouseover="toggle_div('member_option')" onmouseout="hide_it()"><span class="button1" style="cursor:pointer;">Member</span>
+				<div id="member_option" class="option" style="position: absolute; z-index:0;margin-top:0px;" onmouseover="show_it('member_option')" onmouseout="hide_it()" >
+				<p><a href='/cgi-bin/admin/admin_member_add.cgi' class="button1" style="padding: 10px 51.5px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Insert Member</a></p>
+				<p><a href='/cgi-bin/admin/admin_member_delete.cgi' class="button1" style="padding: 10px 50px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Delete Member</a></p>
+				<p><a href='/cgi-bin/admin/admin_member_update.cgi' class="button1" style="padding: 10px 47px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Update Member</a></p>
+				<p><a href='/cgi-bin/admin/admin_member_search.cgi' class="button1" style="padding: 10px 49px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Search Member</a></p>
+				<p><a href='/cgi-bin/admin/admin_member_viewall.cgi' class="button1" style="padding: 10px 43.5px;border-color:white;border-bottom-left-radius:10px;border-bottom-right-radius:10px;box-shadow: rgba(0,0,0,1) 0 0 0;border-right-color: #999999;border-left-color: #999999;border-bottom-color: #999999;" >ViewAll Members</a></p>
+				</div>
+			</td>
+			
+			<!-- onmouseover this tab shows list -->
+			<td onmouseover="toggle_div('book_option')" onmouseout="hide_it()"><span class="button1" style="cursor:pointer;">Book</span>
+				<div id="book_option" class="option" style="position: absolute; z-index:0;margin-left:0px;" onmouseover="show_it('book_option')" onmouseout="hide_it()" >
+				<p><a href='/cgi-bin/admin/book/admin_book_add.cgi' class="button1"  style="padding: 10px 61px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Insert Book</a></p>
+				<p><a href='/cgi-bin/admin/book/admin_book_delete.cgi' class="button1"  style="padding: 10px 59.5px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Delete Book</a></p>
+				<p><a href='/cgi-bin/admin/book/admin_book_update.cgi' class="button1"  style="padding: 10px 56.5px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Update Book</a></p>
+				<p><a href='/cgi-bin/admin/book/admin_book_search.cgi' class="button1"  style="padding: 10px 58.5px;border-color:white;border-right-color: #999999;border-left-color: #999999;">Search Book</a></p>
+				<p><a href='/cgi-bin/admin/book/admin_book_viewall.cgi' class="button1"  style="padding: 10px 53px;border-color:white;border-bottom-left-radius:10px;border-bottom-right-radius:10px;box-shadow: rgba(0,0,0,1) 0 0 0;border-right-color: #999999;border-left-color: #999999;border-bottom-color: #999999;">ViewAll Books</a></p>
+				</div>
+			</td>
+			
+			<td ><a href="/cgi-bin/admin/issue/admin_issue.cgi"class="button1">Issue</a></td>
+			<td ><a href="/cgi-bin/admin/return/admin_return.cgi"class="button1">Return</a></td>
+			<td ><a href="/cgi-bin/admin/problem/admin_problem.cgi" class="button1"">Problems</a></td>
+		</tr>
+		</table>
+
+	</div>	<!-- end of button div -->
+</div>	<!-- end of header div -->

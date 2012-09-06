@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<div id="pageheader">
+		<title>The Central Library</title>
+		<link rel="icon"   type="image/png"  href="/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/style/style.css" />
+		
+		<!-- this java script is for Home Image Changes -->
+		<!-- ========================================== -->
+		<script type="text/javascript">
+
+			var image1=new Image()
+			image1.src="/images/home/home.jpg"
+			var image2=new Image()
+			image2.src="/images/home/img.jpg"
+			var image3=new Image()
+			image3.src="/images/home/img1.jpg"
+			var image4=new Image()
+			image4.src="/images/home/img2.jpg"
+			var image5=new Image()
+			image5.src="/images/home/img3.jpg"
+			var image6=new Image()
+			image6.src="/images/home/img4.jpg"
+			var image7=new Image()
+			image7.src="/images/home/img5.jpg"
+			var image8=new Image()
+			image8.src="/images/home/img6.jpg"
+			var image9=new Image()
+			image9.src="/images/home/img7.jpg"
+			var image10=new Image()
+			image10.src="/images/home/img8.jpg"
+			var image11=new Image()
+			image11.src="/images/home/img9.jpg"
+
+		</script>
+		
+		
+		<script type="text/javascript" src="/style/jquery-1.7.2.min.js" ></script>
+		
+		<!-- FAQs script  -->
+		<!-- ============ -->
+		<script  type="text/javascript" >
+			$('document').ready(function(){
+				$('#showtext').hide();
+			});
+			function show(){
+				$('#readmore').hide();
+				$('#showtext').slideDown();
+			}
+			function hide(){
+				$('#showtext').hide();
+				$('#readmore').show();
+			}
+		
+		</script>
+
+		<!-- FAQs script  -->
+		<!-- ============ -->
+		<script  type="text/javascript" >
+		 $('document').ready(function(){
+		$('.question').hide();
+		});
+		function toggle_div(id){
+		$('#'+id).animate({marginLeft:'10px'});
+		$('#'+id).toggle(1000);
+		}
+		</script>
+
+		
+		
+	</div> <!-- end of pageheader div -->
+</head>
+
+
+
+<body>
+
+<!-- border div provides facility of transparent background by adding transparent image as a background in this div -->
+<!-- ============================================================================================================== -->
+<div id="border" style="border-right: solid #bbbbbb;border-right-width:1px; border-left: solid #bbbbbb;border-left-width:1px; border-top: solid #bbbbbb;border-top-width:1px;">
+<div id="header">
+	
+	<table border=0><tr>
+	<td><span style="float:right"><img src="/images/book_logo2.jpg" height=70 width=100></span></td>
+	<td><h1><span style="float:right"> The Central Library For Public </span></h1>
+	<p><span style="float:right"> For you, With you and By you </span></p><td>
+	<td id="change_image"><img src="/images/book_logo2.jpg" height=70 width=100></td>
+	</tr>
+	</table>
+	
+	<br><br>
+	
+	<div id="buttons" ><p>
+		<table border="0" cellpadding="0" cellspacing="0"><tr>
+			<td><a href="/cgi-bin/library.cgi" class="button1">Home</a><br></td>
+			<td ><a href="/cgi-bin/search.cgi" class="button1">Search</a><br></td>
+			<td ><a href="/cgi-bin/login.cgi"  class="button1">Login</a><br></td>
+			<td ><a href="/cgi-bin/faqs.cgi"  class="button1">FAQs</a><br></td>
+			<td ><a href="/cgi-bin/aboutus.cgi"class="button1">AboutUs</a><br></td>
+			<td ><a href="/cgi-bin/help.cgi"class="button1">Help</a><br></td>
+			</tr>
+		</table>
+
+	</div>	<!-- end of buttons div -->
+</div>	<!-- end of header div -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div id="body">
+
+<p>Problems</p>
+<form action="/cgi-bin/admin/problem/admin_problem_solved.cgi" method="post" name="problem" value="problem">
+	<div class="problem">
+		<table border=1>
+				<tr class="table_back">
+					<td>Member Id</td><td>Problem</td><td>Description</td><td>Date</td>
+				</tr>
+				<TMPL_LOOP NAME="problem">
+					<tr>
+					<td><input type="checkbox" name="rd_bid" value=<TMPL_VAR NAME="p_id"> ><TMPL_VAR NAME="m_id"></td>
+					<td><TMPL_VAR NAME="p_name"></td>
+					<td><TMPL_VAR NAME="description"></td>
+					<td><TMPL_VAR NAME="p_date"></td>
+					</tr>
+				</TMPL_LOOP>
+		</table>
+		<p><tmpl_var name=SUCCESS></p>
+	<input class="button" type="submit" name="Solved" value="Solved" >
+	</div>	<!-- end of problem div -->
+</form>
+
+</div> <!-- end of div body -->

@@ -1,0 +1,18 @@
+<div id="body">
+	<p>Delete Member</p>
+	<form action="/cgi-bin/admin/admin_member_delete_submit.cgi" method="post" name="delete_member" value="delete_member">
+		<table border=0>
+				<tr>
+					<td width=150px style="text-align:right">Member Id  </td>
+					<td><input name="txtid" size=13px type="text" /></td>
+					<td id="no_mem" width=150px class="message"><tmpl_var name=no_mem></td>
+				</tr>
+				<tr><td></br></td></tr>
+				<tr>
+					<td></td>
+					<td><input class="button" type="submit" value="Delete" onclick="return valid_mid_delete(txtid.value)"></td>
+				</tr>
+		</table>
+	</form>
+
+</div> <!-- end of body div -->

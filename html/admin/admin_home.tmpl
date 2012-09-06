@@ -1,0 +1,33 @@
+
+<div id="body">
+
+	<p style="color:green;"><TMPL_VAR NAME=SUCCESS></p>
+	
+	<img src="/images/home.jpg" width=870 height=400px name="slide" />
+
+	<!-- script for changing images in home -->
+	<script>
+		<!--
+		//variable that will increment through the images
+		var step=1
+		function slideit(){
+			//if browser does not support the image object, exit.
+			if (!document.images)
+			return
+			document.images.slide.src=eval("image"+step+".src")
+			if (step<10)
+			step++
+			else
+			step=1
+			//call function "slideit()" every 2.5 seconds
+			setTimeout("slideit()",2500)
+		}
+		slideit()
+		//-->
+	</script>
+	
+	<p style="float:right;text-align:left;margin-left:20px;margin-right:20px;">"The Central Library" is a website that facilitates access to search books by its title, tag, author, publisher etc and issue books that are available in our Library. Members can also see their profile and get aware with their account information like howmany books are issued by him, any book is returned or not and check its fine if it will contain any fine. </p>
+	<p style="text-align:left;margin-left:20px;margin-right:20px;">The most important portion is "Problem" link, using which if a member can find or suffer from any difficulty due to Library staff or material or this website can write his/her problem in problem link and within 2 days that problem will be solved. Suppose your problem will not be solved then contact Head Librarian. </p>
+
+
+</div>	<!-- end of body div -->

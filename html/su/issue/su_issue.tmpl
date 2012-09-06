@@ -1,0 +1,55 @@
+<div id="body">
+
+<p><b>Issue Book</b></p>
+<form action="/cgi-bin/su/issue/su_issue_submit.cgi" method="post" name="issue_book" id="issue_book" value="issue_book">
+
+	<!-- ===== table in which we enter group id of book to search available book ids ====== -->
+	<table border=0>
+	<tr>
+		<td>Group ID</td>
+		<td><input id="txtid" name="txtid" type="text" placeholder="search"></td>
+		<td>Member ID</td>
+		<td><input id="txtmid" name="txtmid" type="text" placeholder="Member Id" ></td>
+		
+	</tr>
+	<tr>
+		<td><p></p></td>
+		<td><input class="button" type="submit" name="search_books" value="Search Book" onclick="return valid_gid(txtid.value)" ></td>
+		<td><p></p></td>
+		<td><input class="button" type="submit" name="issue_books" value="Issue Book" onclick="return valid_mid_bid(txtmid.value)" ></td>
+	</tr>
+	<tr>
+		<td><p></p></td>
+		<td id=no_group class="message"><tmpl_var name=no_group></td>
+		<td><p></p></td>
+
+		<td id=no_mem class="message"><tmpl_var name=no_mem></td>
+	</tr>
+	</table>
+
+	<p style="color:green;"><tmpl_var name=SUCCESS></p>
+
+	<!-- ================== result table of search table ================ -->
+	<div class="search" style="visibility:<tmpl_var name=search_table>">
+		<table border=1>
+		<tr class="table_back">
+		<td>Book ID</td><td>Book Title</td><td>Subject Name</td><td>Tag</td><td>Author Name</td><td>Edition</td><td>Publisher</td><td>Available</td>
+		</tr>
+		<TMPL_LOOP NAME="issuebooks">
+			<tr>
+			<td><input type="radio" name="rd_bid" value=<TMPL_VAR NAME="BID"> ><TMPL_VAR NAME="BID"></td>
+			<td><TMPL_VAR NAME="TITLE"></td>
+			<td><TMPL_VAR NAME="SUB"></td>
+			<td><TMPL_VAR NAME="TAG"></td>
+			<td><TMPL_VAR NAME="AUTH"></td>
+			<td><TMPL_VAR NAME="EDITION"></td>
+			<td><TMPL_VAR NAME="PUBLISHER"></td>
+			<td><TMPL_VAR NAME="AVAIL"></td>
+			</tr>
+		</TMPL_LOOP>
+		</table>
+	</div>	<!-- end of search div -->
+</form>	<!--end of form -->
+
+
+</div> <!-- end of body div -->

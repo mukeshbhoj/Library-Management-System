@@ -1,0 +1,25 @@
+<div id="body">
+
+<!-- shows all the unsolved problems, and if it solved just check it and click on 'Solved' button -->
+<p>Problems</p>
+<form action="/cgi-bin/admin/problem/admin_problem_solved.cgi" method="post" name="problem" value="problem">
+	<div class="problem">
+		<table border=1 style="visibility:<tmpl_var name=visibility>;">
+				<tr class="table_back">
+					<td>Member Id</td><td>Problem</td><td>Description</td><td>Date</td>
+				</tr>
+				<TMPL_LOOP NAME="problem">
+					<tr>
+					<td><input type="checkbox" name="p_id" value=<TMPL_VAR NAME="p_id"> ><TMPL_VAR NAME="m_id"></td>
+					<td><TMPL_VAR NAME="p_name"></td>
+					<td width=500px><TMPL_VAR NAME="description"></td>
+					<td><TMPL_VAR NAME="p_date"></td>
+					</tr>
+				</TMPL_LOOP>
+				</table>
+				<p class="message"><tmpl_var name=COUNT></p>
+				<p style="color:green;"><tmpl_var name=SUCCESS></p>
+			<span style="visibility:<tmpl_var name=visibility>;"><input class="button" type="submit" name="Solved" value="Solved" ></span>
+	</div>	<!-- end of problem div -->
+</form>
+</div>

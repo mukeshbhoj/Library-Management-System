@@ -1,0 +1,27 @@
+<div id="body">
+
+<p>Returned Books</p>
+
+	<p><tmpl_var name=total_book></p>
+
+	<div class="search" style="visibility:<tmpl_var name=search_table>">
+		<table border=1>
+		<tr class="table_back">
+		<td>Book ID</td><td>Book Title</td><td>Issued Date</td><td>Issued By</td><td>Returned Date</td><td>Returned By</td><td>Fine</td>
+		</tr>
+		<TMPL_LOOP NAME="returned_book">
+			<tr>
+			<td><TMPL_VAR NAME="bid"></td>
+			<td><TMPL_VAR NAME="title"></td>
+			<td><TMPL_VAR NAME="issuedate"></td>
+			<td><TMPL_VAR NAME="issueby"></td>
+			<td><TMPL_VAR NAME="returndate"></td>
+			<td><TMPL_VAR NAME="returnby"></td>
+			<td><TMPL_VAR NAME="fine"></td>
+			</tr>
+		</TMPL_LOOP>
+		</table>
+	</div>	<!-- end of search div -->
+
+
+</div> <!-- end of body div -->

@@ -1,0 +1,24 @@
+<div id="body">
+	<p><b>Login</b></p>
+	<div id="login">
+		<form action="/cgi-bin/choose_user.cgi" method="post" name="login_1" value="login_1">
+			<table border=0>
+				<tr>
+					<td>Username</td>
+					<td><input name="username" size="12" type="text" /></td>
+				</tr>
+				<tr>
+				<td>Password</td>
+					<td><input name="password" type="password" size="12" type="text" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="float:lft"><input class="button" type="submit" value="Login"/></td>
+				</tr>
+			</table>
+		</form>
+		
+		<p class="message"><tmpl_var name=wrong><p>
+	</div> <!-- end of login div -->
+</div>	<!-- end of body div -->
+

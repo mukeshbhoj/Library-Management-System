@@ -1,0 +1,20 @@
+<!-- template for find member whose information want to update -->
+
+<div id="body" >
+<p>Update Member</p>
+	<form action="/cgi-bin/admin/admin_member_update_search.cgi" method="post" name="add_member" value="add_member">
+		<table border=0>
+				<tr>
+					<td width=100px>Memeber Id  </td>
+					<td><input name="txtid" type="text" /></td>
+					<td width=100px class="message"><tmpl_var name=varid></td>
+				</tr>
+				<tr><td></br></td></tr>
+				<tr>
+					<td></td>
+					<td><input class="button" name="search" value="Search" type="submit"></td>
+				</tr>
+		</table>
+	</form>
+
+</div>	<!-- end of body div -->

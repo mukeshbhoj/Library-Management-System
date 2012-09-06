@@ -1,0 +1,34 @@
+
+<div id="body">
+
+<img src="/images/home/home.jpg" width=840 height=400px name="slide" style="filter:revealTrans(duration=2,transition=18)" />
+
+
+<!-- A script through which we can change images -->
+<script>
+	//variable that will increment through the images
+	var step=1
+	function slideit(){
+	//if browser does not support the image object, exit.
+	if (!document.images)
+	return
+	document.images.slide.src=eval("image"+step+".src")
+	if (step<11)
+	step++
+	else
+	step=1
+	//call function "slideit()" every 2.5 seconds
+	setTimeout("slideit()",2500)
+	}
+	slideit()
+</script> 
+
+
+<p style="float:right;text-align:left;margin-left:20px;margin-right:20px;">"The Central Library" is a website that facilitates access to search books by its title, tag, author, publisher etc and issue books that are available in our Library. Members can also see their profile and get aware with their account information like howmany books are issued by him, any book is returned or not and check its fine if it will contain any fine. </p>
+<p id="readmore" onclick="show()" style="text-align:right;cursor:pointer;color:blue;">...read more</p>
+<p id="showtext" style="text-align:left;margin-left:20px;margin-right:20px;">The most important portion is "Problem" link, using which if a member can find or suffer from any difficulty due to Library staff or material or this website can write his/her problem in problem link and within 2 days that problem will be solved. Suppose your problem will not be solved then contact Head Librarian. 
+<br/>The Central Library is the international scientific, technical, medical, and scholarly publishing business . The Central Library with strengths in every major academic and professional field and partnerships journals and 1,500+ new books annually in print and online, as well as databases, major reference works and laboratory protocols. For more information, please mail us on <a href="mailto:mukeshbhoj@yahoo.com">mukeshbhoj@yahoo.com</a> <span onclick="hide()" style="float:right;color:blue;cursor:pointer;"> ...hide it</span></p>
+
+
+</div>	<!-- end of body div -->
+

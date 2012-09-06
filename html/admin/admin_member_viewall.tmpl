@@ -1,0 +1,47 @@
+<div id="body">
+<p>All Members</p>
+
+	<!-- division provides information about all members -->
+	<div class="viewall" style="font-size:14px;">
+	
+		<table border=1 class="search_table" width=870px>
+		
+			<tr style="height:30px;width:100%;" class="table_back" >
+					<td style="width:30px;" >ID</td>
+					<td style="width:62px;" >Name</td>
+					<td style="width:85px;">Birth Date</td>
+					<td style="width:125px;">Address</td>
+					<td style="width:50px;">Sex</td>
+					<td style="width:100px;">Mobile No.</td>
+					<td style="width:85px;">Join Date</td>
+					<td style="width:70px;">User Type</td>
+					<td style="width:80px;">User Name</td>
+					<td style="width:100px;">Password</td>
+			</tr>
+			
+			<tr style="height:100%;width:100%;">
+				<td colspan="10">
+					<div id="inner" style="height:500px;width:100%; overflow-y:scroll;">
+						<table style="height:100%;width:100%;" border=1>
+							<TMPL_LOOP NAME="THIS_LOOP" >
+							<tr style="height:30px;width:100%;">
+								<td style="width:25px;"><TMPL_VAR NAME="id"></td>
+								<td style="width:62px;"><TMPL_VAR NAME="name"></td>
+								<td style="width:85px;"><TMPL_VAR NAME="birthdate"></td>
+								<td style="width:125px;"><TMPL_VAR NAME="address">, <TMPL_VAR NAME="city">, <TMPL_VAR NAME="state"></td>
+								<td style="width:50px;"><TMPL_VAR NAME="sex"></td>
+								<td style="width:100px;"><TMPL_VAR NAME="phno"></td>
+								<td style="width:85px;"><TMPL_VAR NAME="joindate"></td>
+								<td style="width:70px;"><TMPL_VAR NAME="usertype"></td>
+								<td style="width:80px;"><TMPL_VAR NAME="username"></td>
+								<td style="width:80px;"><TMPL_VAR NAME="password"></td>
+							</tr>
+							</TMPL_LOOP>
+						</table>
+					</div> <!-- end of inner division -->
+				</td>
+			</tr>
+		</table>
+	</div> <!-- end of viewall div -->
+</div> <!-- end of body div -->
+

@@ -1,0 +1,62 @@
+<div id="body">
+	<p><b>Search Books</b></p>
+	<div id="search_book">
+		<form action="/cgi-bin/su/su_search_book.cgi" method="post" name="login_1" value="login_1">
+				<table align=center><tr>
+						<td>BookTitle <input name="title" size="15" type="text" placeholder="search by title"/></td>
+						<td>Author <input name="author" size="15" type="text" placeholder="search by author"/></td>
+						<td>Group Id <input name="id" size="15" type="text" placeholder="search by Group ID"/></td>
+					</tr>
+					<tr>
+						<td>Publisher <input name="publisher" size="15" type="text" placeholder="search by publication"/></td>
+						<td>Subject<input name="subject" size="15" type="text" placeholder="subject e.g perl,java"/></td>
+						<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Tag <input name="tag" size="15" type="text" placeholder="tag e.g programming"/></td>
+					</tr>
+				</table>
+				<p>
+					<input class="button" value="Search" type="submit"/></p>
+		</form>
+	</div> <!-- end of search_book div -->
+
+	<p style="text-align:left;color:green;"><TMPL_VAR NAME="RECORDS"></p>
+	
+		<table border=1 class="search_table" style="visibility:<tmpl_var name=search_table>">
+		 
+		<tr style="height:30px;width:810px;font-size:14px;" class="table_back"  >
+				<td style="width:50px;" >Group ID</td>
+				<td style="width:120px;">Book Title</td>
+				<td style="width:90px;">Subject Name</td>
+				<td style="width:125px;">Tag</td>
+				<td style="width:110px;">Author Name</td>
+				<td style="width:50px;">Edition</td>
+				<td style="width:100px;">Publisher</td>
+				<td style="width:55px;">Total Books</td>
+				<td style="width:60px;">Available Books</td>
+			</tr>
+		
+			<tr style="height:100%;width:100%;">	<td colspan="9">
+			<div style="height:300px;width:850px; overflow-y:scroll;">
+			<table style="width:100%;" border=1>
+			<TMPL_LOOP NAME="THIS_LOOP" >
+				<tr style="height:30px;width:100%;">
+				<td style="width:45px;"><TMPL_VAR NAME="GID"></td>
+				<td style="width:120px;"><TMPL_VAR NAME="TITLE"></td>
+				<td style="width:90px;"><TMPL_VAR NAME="SUB"></td>
+				<td style="width:125px;"><TMPL_VAR NAME="TAG"></td>
+				<td style="width:110px;"><TMPL_VAR NAME="AUTH"></td>
+				<td style="width:50px;"><TMPL_VAR NAME="EDITION"></td>
+				<td style="width:100px;"><TMPL_VAR NAME="PUBLISHER"></td>
+				<td style="width:55px;"><TMPL_VAR NAME="COPY_TOTAL"></td>
+				<td style="width:41px;"><TMPL_VAR NAME="COPY_AVAIL"></td>
+				</tr>
+			</TMPL_LOOP>
+</table></div></td>
+	</tr>
+		
+		</table>
+		</div>	<!-- end of search div -->
+
+
+
+
+</div>	<!-- end of body div -->

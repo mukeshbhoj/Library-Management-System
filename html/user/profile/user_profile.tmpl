@@ -1,0 +1,67 @@
+<div id="body">
+
+<p>User Profile<p>
+
+<form action='/cgi-bin/user/profile/user_change.cgi'?tmpl_var name="id" method='post' >
+
+	<div class="profile">
+	<table border=2 style="margin-left:220px;margin-right:0px;">
+		<TMPL_LOOP NAME="THIS_LOOP">
+			<tr>
+					<td>ID</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=id></td>
+				</tr>
+				<tr>
+					<td >Name</td>
+					<td  style="height:29px;width:200px;color:black;"><tmpl_var name=name></td>
+				</tr>
+				<tr>
+					<td>Birth Date</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=birthdate></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=address></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=city></td>
+				</tr>
+				<tr>
+					<td>State,Country</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=state></td>
+				</tr>
+				<tr>
+					<td>Sex</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=sex></td>
+				</tr>
+				<tr>
+					<td>Mobile Number</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=phno></td>
+				</tr>
+				<tr>
+					<td>Join Date</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=joindate></td>
+				</tr>
+				<tr>
+					<td>User Type</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=usertype></td>
+				</tr>	
+				<tr>
+					<td>Max Books allowed</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=maxbook></td>				
+				</tr>			
+				<tr>
+					<td>Username</td>
+					<td style="height:29px;width:200px;color:black;"><tmpl_var name=username></td>				
+				</tr>
+		</TMPL_LOOP>
+	</table>
+	</div>	<!-- end of search_mem div -->
+<br><br>
+
+<input type="submit" name="changeprofile" value="Update Info" class="button">
+<input type="submit" name="changepassword" value="Change Password" class="button">
+</form>
+<p style="color:green;"><tmpl_var name=SUCCESS></p>
+</div>	<!-- end of body div -->

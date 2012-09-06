@@ -1,0 +1,51 @@
+<div id="body">
+
+<p><b>Profile</b><p>
+
+<form action='/cgi-bin/su/profile/su_change.cgi'?tmpl_var name="id" method='post' >
+
+	<div class="profile">
+	<table border=1>
+		<tr class="table_back" >
+		<td>Id</td><td>Name</td><td>BirthDate</td><td>Address</td><td>Sex</td><td>Mobile Number</td><td>JoinDate</td><td>UserType</td><td>UserName</td>
+		</tr>
+		<TMPL_LOOP NAME="THIS_LOOP">
+			<tr>
+			<td><TMPL_VAR NAME="id"></td>
+			<td><TMPL_VAR NAME="name"></td>
+			<td><TMPL_VAR NAME="birthdate"></td>
+			<td><TMPL_VAR NAME="address">, <TMPL_VAR NAME="city">, <TMPL_VAR NAME="state"></td>
+			<td><TMPL_VAR NAME="sex"></td>
+			<td><TMPL_VAR NAME="phno"></td>
+			<td><TMPL_VAR NAME="joindate"></td>
+			<td><TMPL_VAR NAME="usertype"></td>
+			<td><TMPL_VAR NAME="username"></td>
+			</tr>
+		</TMPL_LOOP>
+	</table>
+	</div>	<!-- end of search_mem div -->
+<br><br>
+
+	<div class="tableContainer">
+	<table border=1>
+		<tr class="table_back" >
+		<td>Book Id</td><td>title</td><td>Issued Date</td><td>Issued By</td><td>Fine</td>
+		</tr>
+		<TMPL_LOOP NAME="issued_book">
+			<tr>
+			<td><TMPL_VAR NAME="bid"></td>
+			<td><TMPL_VAR NAME="title"></td>
+			<td><TMPL_VAR NAME="issuedate"></td>
+			<td><TMPL_VAR NAME="issueby"></td>
+			<td><TMPL_VAR NAME="Fine"></td>
+			</tr>
+		</TMPL_LOOP>
+	</table>
+	</div>	<!-- end of search_books div -->
+<p><tmpl_var name=total_book></p>
+
+<input type="submit" name="changeprofile" value="Update UserInfo" class="button">
+<input type="submit" name="changepassword" value="Change Password" class="button">
+</form>
+<p style="color:green;"><tmpl_var name=SUCCESS></p>
+</div>	<!-- end of body div -->

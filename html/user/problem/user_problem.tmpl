@@ -1,0 +1,11 @@
+<div id="body">
+	<p>Problem Details</p>
+	<form action="/cgi-bin/user/problem/user_problem_submit.cgi" method="post">
+		<table>
+		<tr><td>Subject</td><td><input type="text" name="txtsubject" placeholder="subject"></td></tr>
+		<tr><td >Description</td><td><textarea name="txtdescription" style="height:100px;width:230px;" placeholder="decribe your problem"></textarea></td></tr>
+		<tr><td></td><td ><input class="button" type="submit" value="Submit"></td></tr>
+		</table>
+	</form>
+<p style="color:green;"><TMPL_VAR NAME=SUCCESS></p>
+</div>

@@ -1,0 +1,19 @@
+<div id="body">
+
+<p><b>Return Book</b></p>
+<form action="/cgi-bin/admin/return/admin_return_search.cgi" method="post" name="search_Book" value="search_Book">
+	<table border=0>
+	<tr>
+		<td width=160px style="text-align:right;">Member ID</td>
+		<td><input name="txtid" size=13px type="text"></td>
+		<td id="no_mem" class="message" width=150px><tmpl_var name=no_mem></td>
+	</tr>
+	<tr>
+		<td><p></p></td>
+		<td><input class="button" type="submit" value="Search" onclick="return valid_mid(txtid.value)"></td>
+	</tr>
+	</table>
+
+</form>
+<span style="color:green;"><tmpl_var name=SUCCESS></span>
+</div> <!-- end of body div -->
